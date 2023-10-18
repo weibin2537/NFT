@@ -1,0 +1,59 @@
+Arguments: 
+  /opt/homebrew/Cellar/node/20.7.0/bin/node /opt/homebrew/Cellar/yarn/1.22.19/libexec/bin/yarn.js install
+
+PATH: 
+  /Users/weibin/Downloads/hyperledger-fabric-darwin-amd64-2.2.13/bin:/opt/homebrew/opt/curl/bin:/opt/homebrew/opt/mysql@5.7/bin:/opt/homebrew/opt/mysql-client@5.7/bin:/opt/homebrew/opt/elasticsearch@6/bin:/opt/homebrew/Cellar/openjdk@11/11.0.19/bin:/opt/homebrew/opt/openjdk@17/bin:/opt/homebrew/opt/elasticsearch@6/bin:/opt/homebrew/opt/inetutils/libexec/gnubin:/opt/homebrew/opt/lsof/bin:/opt/homebrew/bin:/usr/local/bin:/usr/local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/bin:/usr/bin:/usr/local/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk/Contents/Home/bin:/opt/homebrew/Cellar/jmeter/5.5/libexec//bin:.PATH:/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin:/Users/weibin/.npm-global/bin:/Users/weibin/Downloads/apache-maven-3.9.0/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  20.7.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  Error: https://registry.npm.taobao.org/@openzeppelin%2fcontracts: ESOCKETTIMEDOUT
+      at ClientRequest.<anonymous> (/opt/homebrew/Cellar/yarn/1.22.19/libexec/lib/cli.js:141517:19)
+      at Object.onceWrapper (node:events:628:28)
+      at ClientRequest.emit (node:events:514:28)
+      at TLSSocket.emitRequestTimeout (node:_http_client:840:9)
+      at Object.onceWrapper (node:events:628:28)
+      at TLSSocket.emit (node:events:526:35)
+      at Socket._onTimeout (node:net:589:8)
+      at listOnTimeout (node:internal/timers:573:17)
+      at process.processTimers (node:internal/timers:514:7)
+
+npm manifest: 
+  {
+    "name": "hardhat-tutorial",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+      "@nomiclabs/hardhat-ethers": "^2.2.3",
+      "@nomiclabs/hardhat-waffle": "^2.0.6",
+      "chai": "^4.3.10",
+      "ethereum-waffle": "^4.0.10",
+      "ethers": "^5.7.2",
+      "hardhat": "^2.18.1"
+    },
+    "dependencies": {
+      "@openzeppelin/contracts": "^5.0.0",
+      "dotenv": "^16.3.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
