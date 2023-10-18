@@ -30,6 +30,14 @@ async function main() {
     "Crypto Devs Contract Address:",
     deployedCryptoDevsContract.address
   );
+  console.log(
+    "Crypto Devs Contract code:",
+    deployedCryptoDevsContract.code
+  );
+  console.log(
+    "Crypto Devs Contract Storage:",
+    deployedCryptoDevsContract.storage
+  );
 }
 
 // Call the main function and catch if there is any error
