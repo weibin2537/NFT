@@ -1,11 +1,10 @@
 "use client";
-import { Contract, utils } from "ethers";
+import { Contract, ethers } from "ethers";
 import Head from "next/head";
 import React, { useEffect, useRef, useState } from "react";
 import Web3Modal from "web3modal";
 import { abi, NFT_CONTRACT_ADDRESS } from "../../constants";
 import styles from "../style/Home.modules.css";
-import { ethers } from "ethers";
 
 export default function Home() {
   // walletConnected keep track of whether the user's wallet is connected or not
@@ -41,7 +40,7 @@ export default function Home() {
       const tx = await whitelistContract.presaleMint({
         // value signifies the cost of one crypto dev which is "0.01" eth.
         // We are parsing `0.01` string to ether using the utils library from ethers.js
-        value: utils.parseEther("0.01"),
+        value: ethers.utils.parseEther("0.01"),
       });
       setLoading(true);
       // wait for the transaction to get mined
@@ -71,7 +70,7 @@ export default function Home() {
       const tx = await whitelistContract.mint({
         // value signifies the cost of one crypto dev which is "0.01" eth.
         // We are parsing `0.01` string to ether using the utils library from ethers.js
-        value: utils.parseEther("0.01"),
+        value: ethers.utils.parseEther("0.01"),
       });
       setLoading(true);
       // wait for the transaction to get mined
@@ -162,9 +161,9 @@ export default function Home() {
       // have read-only access to the Contract
       const nftContract = new Contract(NFT_CONTRACT_ADDRESS, abi, provider);
       // call the presaleEnded from the contract
-      setLoading(true);
+
       const _presaleEnded = await nftContract.presaleEnded();
-      setLoading(false);
+
       // _presaleEnded is a Big Number, so we are using the lt(less than function) instead of `<`
       // Date.now()/1000 returns the current time in seconds
       // We compare if the _presaleEnded timestamp is less than the current time

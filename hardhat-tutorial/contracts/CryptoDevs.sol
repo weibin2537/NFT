@@ -44,7 +44,7 @@
        * Constructor for Crypto Devs takes in the baseURI to set _baseTokenURI for the collection.
        * It also initializes an instance of whitelist interface.
        */
-      constructor (string memory baseURI, address whitelistContract) Ownable(whitelistContract)  ERC721("Crypto Devs", "CD") {
+      constructor (string memory baseURI, address whitelistContract) Ownable(msg.sender)  ERC721("Crypto Devs", "CD") {
           _baseTokenURI = baseURI;
           whitelist = IWhitelist(whitelistContract);
       }
